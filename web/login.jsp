@@ -28,7 +28,7 @@
                     response.sendRedirect("profile.jsp");
                 }
                 else {
-                    response.sendRedirect("home.jsp");
+                    response.sendRedirect("login.jsp");
                 }
             }
         %>
