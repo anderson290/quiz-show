@@ -16,18 +16,21 @@
                 
                 if (logged != null) {
                     %>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.jsp">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.jsp">Sair</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.jsp">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.jsp">Sair</a>
+                        </li>
                     <%
                 }
                 else {
                     %>
                         <li class="nav-item">
                             <a class="nav-link" href="login.jsp">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.jsp">Cadastrar-se</a>
                         </li>
                     <%
                 }
