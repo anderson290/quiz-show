@@ -18,5 +18,48 @@
         <div class="jumbotron text-center">
             Seja Bem Vindo
         </div>
+        <div class="container">
+            <div class="row mt-2">
+                
+                <div class="col-6">
+                    <h2>Ultimos Testes Realizados</h2>
+                    <table class="table table-striped mt-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nota</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anderson</td>
+                                <td>9</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                  <div class="col-6">
+                    <h2>Ranking</h2>
+                    <table class="table table-striped mt-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nota</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anderson</td>
+                                <td>9</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>

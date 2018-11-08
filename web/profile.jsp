@@ -23,6 +23,50 @@
 
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
         <h1>Profile</h1>
-        <p><%= logged %></p>
+        <p>Bem Vindo, <%= logged %></p>
+        
+        <div class="container">
+            <div class="row mt-2">
+                
+                <div class="col-6">
+                    <h2>Seus Últimos Testes</h2>
+                    <table class="table table-striped mt-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nota</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anderson</td>
+                                <td>9</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                  <div class="col-6">
+                    <h2>Ranking</h2>
+                    <table class="table table-striped mt-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nota</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anderson</td>
+                                <td>9</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="btn btn-primary" href="quiz.jsp">Realizar Quiz</button>
+        </div>
     </body>
 </html>
