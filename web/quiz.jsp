@@ -18,13 +18,38 @@
             <h1>Responda o Quiz Abaixo!</h1>
         </div>
         <div class="container">
+            <!--Questão-->
             <div class="row">
                 <div class="quiz">
-                    
+                    <h2>Questão 1</h2>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent faucibus imperdiet arcu nec blandit. Nullam nulla lacus, 
+                        venenatis sit amet sollicitudin vel, elementum a quam.</h4>
+                    <hr/>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta1</h6>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta2</h6>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta3</h6>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-             <a href="profile.jsp" class="btn btn-quiz">Finalizar Quiz</a>
+                <!--Questão Fim-->
+            </div>
+            <div class="row">
+                 <a href="profile.jsp" class="btn btn-quiz">Finalizar Quiz</a>
             </div>
         </div>
-       
+
     </body>
 </html>
