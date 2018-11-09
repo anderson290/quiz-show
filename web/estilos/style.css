@@ -5,6 +5,18 @@
 body{
     background-color:#f8f9fa;
 }
+.login{
+    background-color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 20%;
+    text-align: center;
+}
+inputLogin{
+    border-radius: 5%;
+}
 .jumbotron{
     background-color: #e9ecef;
     border-radius: 0px;
@@ -47,4 +59,19 @@ body{
 }
 .btn-quiz:hover{
     background-color:#117a8b;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-login{
+  width: 100%;
+  background-color: #0c5460;
+  color: #fff;
+  transition: background-color 1s;
+  margin-top:10px;
+}
+.btn-login:hover{
+    background-color:#117a8b;
+    color: #fff;
+    text-decoration: none;
 }

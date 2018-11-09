@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row mt-2">
                 
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
                     <h2 class="text-center">Ultimos Testes Realizados</h2>
                     <table class="table table-striped mt-2">
                         <thead>
@@ -40,7 +40,7 @@
                     </table>
                 </div>
                 
-                  <div class="col-6">
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
                     <h2  class="text-center">Ranking</h2>
                     <table class="table table-striped mt-2">
                         <thead>

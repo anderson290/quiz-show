@@ -30,7 +30,7 @@
 
             <div class="row mt-5">
 
-                <div class="col-6">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
                     <h2 class="text-center">Seus Últimos Testes</h2>
                     <table class="table table-striped mt-2">
                         <thead>
@@ -67,7 +67,7 @@
                         </tbody>
                     </table>
                 </div>
-                <button class="btn btn-quiz" href="quiz.jsp">Realizar Quiz</button>
+               <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
             </div>
             
         </div>

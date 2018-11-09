@@ -7,9 +7,7 @@
 <%@page import="br.com.fatecpg.quiz.Database"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/JSPF/logged.jspf" %>
-<%
-
-    if (logged != null) {
+<%    if (logged != null) {
         response.sendRedirect("profile.jsp");
     }
 
@@ -23,24 +21,27 @@
     </head>
     <body>
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
-        <h1>Login</h1>
-        <%
-            if (request.getParameter("user") != null) {
-                String user = request.getParameter("user").trim();
-                if (Database.searchUser(user)) {
-                    session.setAttribute("user", user);
-                    response.sendRedirect("profile.jsp");
-                }
-                else {
-                    response.sendRedirect("login.jsp");
-                }
-            }
-        %>
-        
-        <form>
-            <label>User</label>
-            <input type="text" name="user" required>
-            <button type="submit">Login</button>
-        </form>
+        <div class="container">
+            <div class="login">
+                <h1 class="mb-3">Login</h1>
+                <%            if (request.getParameter("user") != null) {
+                        String user = request.getParameter("user").trim();
+                        if (Database.searchUser(user)) {
+                            session.setAttribute("user", user);
+                            response.sendRedirect("profile.jsp");
+                        } else {
+                            response.sendRedirect("login.jsp");
+                        }
+                    }
+                %>
+
+                <form>
+                    <div class="form-group">
+                        <input class="form-control mb-3" type="text" id="user" name="user" placeholder="Username" required>
+                        <button type="submit" class="btn btn-login">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
