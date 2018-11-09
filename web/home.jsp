@@ -22,7 +22,7 @@
             <div class="row mt-2">
                 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
-                    <h2 class="text-center">Ultimos Testes Realizados</h2>
+                    <h2 class="text-center">Últimos Testes Realizados</h2>
                     <table class="table table-striped mt-2">
                         <thead>
                             <tr>

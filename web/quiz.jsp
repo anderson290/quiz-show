@@ -17,5 +17,14 @@
         <div class="jumbotron text-center">
             <h1>Responda o Quiz Abaixo!</h1>
         </div>
+        <div class="container">
+            <div class="row">
+                <div class="quiz">
+                    
+                </div>
+             <a href="profile.jsp" class="btn btn-quiz">Finalizar Quiz</a>
+            </div>
+        </div>
+       
     </body>
 </html>
