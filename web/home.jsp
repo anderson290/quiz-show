@@ -16,13 +16,13 @@
     <body>
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
         <div class="jumbotron text-center">
-            Seja Bem Vindo
+            <h1>Seja Bem Vindo</h1>
         </div>
         <div class="container">
             <div class="row mt-2">
                 
                 <div class="col-6">
-                    <h2>Ultimos Testes Realizados</h2>
+                    <h2 class="text-center">Ultimos Testes Realizados</h2>
                     <table class="table table-striped mt-2">
                         <thead>
                             <tr>
@@ -41,7 +41,7 @@
                 </div>
                 
                   <div class="col-6">
-                    <h2>Ranking</h2>
+                    <h2  class="text-center">Ranking</h2>
                     <table class="table table-striped mt-2">
                         <thead>
                             <tr>

@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<nav class="navbar navbar-expand-md bg-light navbar-light">
+<nav class="navbar navbar-expand-md navbar-bg">
     <!-- Brand -->
     <a class="navbar-brand" href="home.jsp">QUIZ</a>
 
