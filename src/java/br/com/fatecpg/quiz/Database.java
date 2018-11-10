@@ -6,6 +6,7 @@
 package br.com.fatecpg.quiz;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 
 /**
@@ -60,4 +61,35 @@ public class Database {
 	return questions;
 
     }
+    
+    private static final ArrayList<Historic> historics = new ArrayList<>();
+    
+    public static ArrayList<Historic> getHistoric(){
+        
+        Calendar cal = Calendar.getInstance();
+        
+        if (historics.isEmpty()) {
+            
+            cal.set(2012, 2, 20, 20, 39);
+            historics.add(new Historic ("Mateus", 5.5, cal.getTime()));
+            
+            cal.set(2016, 2, 10, 10, 23);
+            historics.add(new Historic ("Anderson", 9.0, cal.getTime())); 
+            
+            cal.set(2012, 2, 10, 5, 3);
+            historics.add(new Historic ("Weslley", 7.0, cal.getTime())); 
+            
+            cal.set(2018, 2, 15, 5, 19);
+            historics.add(new Historic ("Guilherme", 9.5, cal.getTime()));
+            
+            cal.set(2017, 9, 14, 15, 29);
+            historics.add(new Historic ("Paolla", 6.5, cal.getTime()));
+
+        }
+        
+        return historics;
+        
+    }
+    
+    
 }
