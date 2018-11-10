@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="col-6">
-                    <h2 class="text-center">Seus Últimos Testes</h2>
+                    <h2 class="text-center">Sua Média</h2>
                     <div class="display-1 text-center"><%= (double)mediaPerfil/(double)limitP %></div>
                 </div>
                 <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
