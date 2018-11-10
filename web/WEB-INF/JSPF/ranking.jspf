@@ -1,0 +1,36 @@
+<%-- 
+    Document   : ranking
+    Created on : 09/11/2018, 23:35:37
+    Author     : mateus
+--%>
+
+<%@page import="br.com.fatecpg.quiz.User"%>
+<%@page import="br.com.fatecpg.quiz.Historic"%>
+<%@page import="br.com.fatecpg.quiz.Database"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<h2  class="text-center">Ranking</h2>
+<table class="table table-striped mt-2">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Nota</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+            for (Historic h : Historic.sortByResult(Database.getHistoric())) {
+                User user = new User("Mateus");
+        %>
+        <tr>
+            <td><%= h.getUser() %></td>
+            <td><%= h.getResult() %></td>
+            <td><%= df.format(h.getDate()) %></td>
+        </tr>
+
+    </tbody>
+    <% } %>
+</table>

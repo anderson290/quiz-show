@@ -50,22 +50,7 @@
                 </div>
 
                 <div class="col-6">
-                    <h2 class="text-center">Ranking</h2>
-                    <table class="table table-striped mt-2">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Nota</th>                               
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Anderson</td>
-                                <td>9</td>
-
-                            </tr>
-                        </tbody>
-                    </table>
+                    <%@ include file="WEB-INF/JSPF/ranking.jspf" %>
                 </div>
                <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
             </div>
