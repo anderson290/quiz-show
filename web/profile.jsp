@@ -21,9 +21,9 @@
     <body>
 
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
-        
+
         <div class="jumbotron text-center">
-            
+
             <h1>Bem Vindo, <%= logged%></h1>
         </div>
         <div class="container mt-5">
@@ -43,8 +43,10 @@
                         <tbody>
                             <%
                                 DateFormat df1 = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+                                int limitP = 0;
                                 for (Historic h : Historic.sortByDate(Database.getHistoric())) {
-                                    if (h.getUser().equals(logged)) {
+                                    if (h.getUser().equals(logged) && limitP <= 9) {
+                                        limitP++;
                             %>
                             <tr>
                                 <td><%= h.getUser()%></td>
@@ -60,9 +62,9 @@
                 <div class="col-6">
                     <%@ include file="WEB-INF/JSPF/ranking.jspf" %>
                 </div>
-               <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
+                <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
             </div>
-            
+
         </div>
     </body>
 </html>

@@ -29,7 +29,7 @@
             <div class="row mt-2">
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
-                        <%@ include file="WEB-INF/JSPF/ultimosquiz.jspf" %>
+                    <%@ include file="WEB-INF/JSPF/ultimosquiz.jspf" %>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
@@ -37,6 +37,5 @@
                 </div>
             </div>
         </div>
-
     </body>
 </html>
