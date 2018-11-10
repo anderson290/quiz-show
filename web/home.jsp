@@ -29,22 +29,7 @@
             <div class="row mt-2">
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
-                    <h2 class="text-center">Últimos Testes Realizados</h2>
-                    <table class="table table-striped mt-2">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Nota</th>                               
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Anderson</td>
-                                <td>9</td>
-
-                            </tr>
-                        </tbody>
-                    </table>
+                        <%@ include file="WEB-INF/JSPF/ultimosquiz.jspf" %>
                 </div>
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">

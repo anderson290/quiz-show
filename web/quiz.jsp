@@ -29,7 +29,7 @@
                                 soma++;
                             }
                         }
-                        double media = 100.0 * ((double) (soma) / (double) (Database.getQuestions().size()));
+                        double media = 10.0 * ((double) (soma) / (double) (Database.getQuestions().size()));
                         
                         Calendar calendar = Calendar.getInstance();
                         calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE),
