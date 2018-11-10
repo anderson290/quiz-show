@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[i] %>"><h6><%=q.getAlternatives()[i] %></h6>
+                                <input type="radio" class="form-check-input" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[i] %>" required><h6><%=q.getAlternatives()[i] %></h6>
                             </label>
                         </div>
                 <%}%>                            

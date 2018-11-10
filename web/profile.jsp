@@ -31,7 +31,30 @@
             <div class="row mt-5">
 
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
-                    <%@ include file="WEB-INF/JSPF/ultimosquiz.jspf" %>
+                    <h2 class="text-center">Seus Últimos Testes</h2>
+                    <table class="table table-striped mt-2">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Nota</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                DateFormat df1 = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+                                for (Historic h : Historic.sortByDate(Database.getHistoric())) {
+                                    if (h.getUser().equals(logged)) {
+                            %>
+                            <tr>
+                                <td><%= h.getUser()%></td>
+                                <td><%= h.getResult()%></td>
+                                <td><%= df1.format(h.getDate())%></td>
+                            </tr>
+                            <% }
+                                }%>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="col-6">
