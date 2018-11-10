@@ -1,6 +1,6 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
-<footer class="bg-dark py-3">
+<footer class="bg-dark py-3 mt-3">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center text-white pb-2">
@@ -8,33 +8,33 @@
             </div>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Perfis GitHub
+                Perfis GitHub
             </button>
-             <!-- Modal -->
+            <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title " id="exampleModalCenterTitle">
-                        <a class="color-modal" href="https://github.com/anderson290/quiz-show" target="_blank">Link do Repositorio</a>
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="h5">
-                         <a href="https://github.com/{nome}" target="_blank">{nome}</a> <br>
-                        <a href="https://github.com/{nome}" target="_blank">{nome}</a>  <br>
-                        <a href="https://github.com/{nome}" target="_blank">{nome}</a>  <br>
-                        <a href="https://github.com/{nome}" target="_blank">{nome}</a>  <br>
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title " id="exampleModalCenterTitle">
+                                <a class="color-modal" href="https://github.com/anderson290/quiz-show" target="_blank">Link do Repositorio</a>
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="h5">
+                                <a href="https://github.com/anderson290" target="_blank">Anderson do Carmo Nunes</a> <br>
+                                <a href="https://github.com/Disistreby" target="_blank">Guilherme Silveira Alves</a>  <br>
+                                <a href="https://github.com/mateusvidalmarinho" target="_blank">Mateus Vidal Marinho</a>  <br>
+                                <a href="https://github.com/weslleyantonio" target="_blank">Weslley Antonio Silva de Miranda</a>  <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                  </div>
                 </div>
-              </div>
             </div>
         </div>
     </div>
