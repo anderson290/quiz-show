@@ -22,15 +22,21 @@
     <tbody>
         <%
             DateFormat df = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
+            int rankCount = 0;
             for (Historic h : Historic.sortByResult(Database.getHistoric())) {
-                User user = new User("Mateus");
+                if (rankCount <= 9) {
         %>
         <tr>
-            <td><%= h.getUser() %></td>
-            <td><%= h.getResult() %></td>
-            <td><%= df.format(h.getDate()) %></td>
+            <td><%= h.getUser()%></td>
+            <td><%= h.getResult()%></td>
+            <td><%= df.format(h.getDate())%></td>
         </tr>
+        <%
+            }
+            rankCount++;
+        %>
 
+        <% }%>
     </tbody>
-    <% } %>
+
 </table>
