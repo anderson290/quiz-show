@@ -3,6 +3,8 @@
     Created on : 08/11/2018, 22:31:40
     Author     : usuario
 --%>
+<%@page import="br.com.fatecpg.quiz.Database"%>
+<%@page import="br.com.fatecpg.quiz.Question"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/JSPF/logged.jspf" %>
 <!DOCTYPE html>
@@ -10,44 +12,50 @@
     <head>
         <%@include file="WEB-INF/JSPF/header.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Quiz</title>
     </head>
     <body>
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
         <div class="jumbotron text-center">
             <h1>Responda o Quiz Abaixo!</h1>
+             <% if(request.getParameter("finalizar")!=null) { %>
+                    <% 
+                        int soma = 0;
+                        for (Question q: Database.getQuestions()){
+                            String resposta = request.getParameter(q.getQuestion());
+                            if (resposta != null && resposta.equals(q.getAnswer())){
+                                soma++;
+                            }
+                        }
+                        double media = 100.0 * ((double) (soma) / (double) (Database.getQuestions().size()));
+                    %>
+                    <h1>Resultado do teste: <%=media%></h1>
+             <%}%>
+                                        
         </div>
         <div class="container">
             <!--Questão-->
             <div class="row">
                 <div class="quiz">
-                    <h2>Questão 1</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Praesent faucibus imperdiet arcu nec blandit. Nullam nulla lacus, 
-                        venenatis sit amet sollicitudin vel, elementum a quam.</h4>
+                    <form>
+                    <% for (Question q: Database.getQuestions()) {%>
+                    <h2>Questão:</h2>
+                    <h4><%= q.getQuestion()%></h4>
                     <hr/>
+                    <% for (int i = 0; i<q.getAlternatives().length; i++){%>
                     <div class="form-group">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta1</h6>
+                                <input type="radio" class="form-check-input" name="<%=q.getQuestion()%>" value="<%=q.getAlternatives()[i] %>"><h6><%=q.getAlternatives()[i] %></h6>
                             </label>
                         </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta2</h6>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optradio"><h6>Resposta3</h6>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <!--Questão Fim-->
+                <%}%>                            
+                <%}%>
+                    </form>
             </div>
             <div class="row">
-                 <a href="profile.jsp" class="btn btn-quiz">Finalizar Quiz</a>
+                 <input type = "submit" class="btn btn-quiz" name="finalizar">
+
             </div>
         </div>
 
