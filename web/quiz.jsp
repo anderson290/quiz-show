@@ -3,6 +3,8 @@
     Created on : 08/11/2018, 22:31:40
     Author     : usuario
 --%>
+<%@page import="br.com.fatecpg.quiz.Historic"%>
+<%@page import="java.util.Calendar"%>
 <%@page import="br.com.fatecpg.quiz.Database"%>
 <%@page import="br.com.fatecpg.quiz.Question"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -28,6 +30,12 @@
                             }
                         }
                         double media = 100.0 * ((double) (soma) / (double) (Database.getQuestions().size()));
+                        
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE),
+                                calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE));
+                        Database.getHistoric().add(new Historic(logged, media, calendar.getTime()));
+
                     %>
                     <h1>Resultado do teste: <%=media%></h1>
              <%}%>
