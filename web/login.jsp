@@ -17,7 +17,7 @@
     <head>
         <%@include file="WEB-INF/JSPF/header.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login</title>
     </head>
     <body>
         <%@ include file="WEB-INF/JSPF/menu.jspf" %>
