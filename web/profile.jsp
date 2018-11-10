@@ -4,6 +4,10 @@
     Author     : mateus
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="br.com.fatecpg.quiz.Database"%>
+<%@page import="br.com.fatecpg.quiz.Historic"%>
+<%@page import="java.text.DateFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/JSPF/logged.jspf" %>
 <%  if (logged == null) {
@@ -44,9 +48,11 @@
                             <%
                                 DateFormat df1 = new SimpleDateFormat("dd/MM/yyyy - HH:mm");
                                 int limitP = 0;
+                                double mediaPerfil = 0;
                                 for (Historic h : Historic.sortByDate(Database.getHistoric())) {
                                     if (h.getUser().equals(logged) && limitP <= 9) {
                                         limitP++;
+                                        mediaPerfil += h.getResult();
                             %>
                             <tr>
                                 <td><%= h.getUser()%></td>
@@ -60,7 +66,8 @@
                 </div>
 
                 <div class="col-6">
-                    <%@ include file="WEB-INF/JSPF/ranking.jspf" %>
+                    <h2 class="text-center">Seus Últimos Testes</h2>
+                    <div class="display-1 text-center"><%= (double)mediaPerfil/(double)limitP %></div>
                 </div>
                 <a href="quiz.jsp" class="btn btn-quiz">Realizar Quiz</a>
             </div>
